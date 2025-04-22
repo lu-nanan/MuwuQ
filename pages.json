@@ -51,6 +51,13 @@
 				"navigationBarTitleText" : "",
 				"backgroundColorContent": "#324148"
 			}
+		},
+		{
+			"path" : "pages/ApLogin/ApLogin",
+			"style" : 
+			{
+				"navigationBarTitleText" : "账号密码登录"
+			}
 		}
 	],
 	"globalStyle": {
