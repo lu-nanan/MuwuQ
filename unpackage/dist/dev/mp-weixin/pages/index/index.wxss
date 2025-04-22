@@ -1,0 +1,21 @@
+@import "../../uvue.wxss";
+:host{display:flex;flex-direction:column}
+
+.picker-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+.pickers {
+    padding: 20rpx;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12rpx;
+}
+.circle-progress {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 20px auto;
+}

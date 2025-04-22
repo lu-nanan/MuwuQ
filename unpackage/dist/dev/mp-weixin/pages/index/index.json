@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "backgroundColorContent": "#fff3cd",
+  "buttons": [
+    {
+      "type": "#ba55d3"
+    }
+  ],
+  "usingComponents": {}
+}

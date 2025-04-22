@@ -1,46 +1,6 @@
-<template>
-    <!-- #ifdef APP -->
-    <scroll-view style="flex:1">
-    <!-- #endif -->
-    <view class="login-container">
-        <view class="login">
-			<view class="box">
-            <view style="color: rgba(255,255,255,1);font-size: 36px;font-family: AlibabaPuHui;line-height: 50px;">注册</view>
-            </view>
-			<input class="uni-input" placeholder="手机"></input>
-            <input class="uni-input" placeholder="邮箱"></input>
-            <input class="uni-input" placeholder="密码"></input>
-			<view class="box">
-				<text style="color: white;">验证方式</text>
-				<button style="width: 30%;border-radius: 30rpx;background: #A4ADB3;color: rgba(255,255,255,1)">手机</button>
-				<button style="width: 30%;border-radius: 30rpx;background: #A4ADB3;color: rgba(255,255,255,1)">邮箱</button>
-			</view>
-			<input class="uni-input " placeholder="验证码"></input>
-            <button style="width: 80%;border-radius: 30rpx;background: #A4ADB3;color: rgba(255,255,255,1)">注册</button>
-            <text style="text-decoration: underline;color: rgba(255,255,255,1);margin-top: auto;"@click="goPage('./login1')">已有账号?</text>
-        </view>
-    </view>
-    <!-- #ifdef APP -->
-    </scroll-view>
-    <!-- #endif -->
-</template>
+@import "../../uvue.wxss";
+:host{display:flex;flex-direction:column}
 
-<script>
-export default {
-    data() {
-        return {
-
-        }
-    },
-    methods: {
-			goPage(url : string) {
-				uni.navigateTo({url})
-				},
-    }
-}
-</script>
-
-<style>
 .login-container {
     display: flex;
     justify-content: center;
@@ -54,7 +14,8 @@ export default {
 	    color: rgba(0, 0, 0, 0);
 	    margin: 0;
 	    padding: 0;
-	    user-select: none;
+	    -webkit-user-select: none;
+	            user-select: none;
 	    box-sizing: border-box;
 	    border-color: rgb(187, 187, 187);
 	    border-width: 1px;
@@ -63,7 +24,6 @@ export default {
 	    height: 100%;
 	    text-decoration: none;
 }
-
 .login {
     display: flex;
     flex-direction: column;
@@ -83,7 +43,8 @@ export default {
 	    font-family: BlinkMacSystemFont, "Helvetica Neue", Arial, "Microsoft Yahei", "WenQuanYi Micro Hei", "Pingfang SC", sans-serif;
 	    margin: 0;
 	    padding: 0;
-	    user-select: none;
+	    -webkit-user-select: none;
+	            user-select: none;
 	    box-sizing: border-box;
 	    box-shadow: rgb(85, 98, 105) 0px 2px 6px 7px;
 	    font-weight: 400;
@@ -91,7 +52,6 @@ export default {
 	    color: rgba(0, 0, 0, 0);
 	    background: rgba(255, 255, 255,0.22);
 }
-
 .box {
     display: flex;
     flex-direction: row;
@@ -102,19 +62,15 @@ export default {
 	color: #3b2300;
 	font-size: 12rpx;
 }
-
 .uni-input {
     padding: 12rpx;
     border-radius: 30rpx;
     margin: 12rpx;
     width: 95%; /* 让输入框宽度与父元素一致 */
     background-color: #ffffff;
-	
 }
-
 .underline-text {
     text-decoration: underline; /* 为文本添加下划线 */
 	font-size: 12rpx;
 	color: rgba(255,255,255,1)
 }
-</style>  
