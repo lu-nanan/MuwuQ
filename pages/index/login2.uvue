@@ -44,6 +44,8 @@ export default {
 
 <style>
 .login-container {
+	background-color: #8D8DC1;
+	/* #8D8DC1; */
     display: flex;
     justify-content: center;
     align-items: center;
