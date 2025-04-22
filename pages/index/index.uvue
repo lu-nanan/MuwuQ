@@ -1,38 +1,67 @@
 <template>
-	<view>
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
-	</view>
+    <view>
+        <view class="picker-container">
+            <picker mode="selector" :range="options" @change="onPickerChange" :value="selectedIndex">
+                <view class="pickers">
+                    当前选择: {{ options[selectedIndex] }}
+                </view>
+            </picker>
+            <picker mode="selector" :range="options" @change="onPickerChange" :value="selectedIndex">
+                <view class="pickers">
+                    当前选择: {{ options[selectedIndex] }}
+                </view>
+            </picker>
+            <picker mode="selector" :range="options" @change="onPickerChange" :value="selectedIndex">
+                <view class="pickers">
+                    当前选择: {{ options[selectedIndex] }}
+                </view>
+            </picker>
+        </view>
+    </view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				title: 'Helloi'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
-		}
-	}
+export default {
+    data() {
+        return {
+            title: 'Helloi',
+            options: ['选项1', '选项2', '选项3', '选项4'],
+            selectedIndex: 0
+        };
+    },
+    onLoad() {
+		
+	},
+    onReady() {
+    },
+    methods: {
+        onPickerChange(e) {
+            this.selectedIndex = e.detail.value;
+            console.log('选择的选项是:', this.options[this.selectedIndex]);
+        }
+    }
+};
 </script>
 
 <style>
-	.logo {
-		height: 100px;
-		width: 100px;
-		margin: 100px auto 25px auto;
-	}
+.picker-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
 
-	.title {
-		font-size: 18px;
-		color: #8f8f94;
-    text-align: center;
-	}
-</style>
+.pickers {
+    padding: 20rpx;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12rpx;
+}
+
+.circle-progress {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 20px auto;
+}
+</style>    
