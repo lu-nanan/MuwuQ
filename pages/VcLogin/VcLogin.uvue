@@ -13,7 +13,8 @@ import uniIcons from '@/uni_modules/uni-icons/
 		
 		<view class="input-group">
 		  <uni-icons type="locked" size="60rpx" color="#6966AD"></uni-icons>
-		  <input class="login-input" placeholder="登录密码" />
+		  <input class="Verification-input" placeholder="验证码" />
+		  <button class="Verification-button">获取</button>
 		</view>
 
 		<view class="remeberme">
@@ -23,7 +24,7 @@ import uniIcons from '@/uni_modules/uni-icons/
 		</view>
 		
 		<view>
-			<text class="y-text">验证码登录</text>
+			<text class="y-text">账号密码登录</text>
 		</view>
 		
 		<view class="to-register">
@@ -76,25 +77,42 @@ export default {
   // display: flex; /* 水平排列图标和输入框 */
   margin-left: 5%;
   margin-top: 21rpx;
-  margin-bottom: 20rpx;
-  width: 55%;
+  width: 60%;
   display: flex;
   flex-direction: row;
+  margin-bottom: 20rpx; /* 组之间的间距 */
   padding-bottom: 3rpx; /* 下划线与内容的间距 */
   border-bottom: 1rpx solid #ccc; /* 添加下划线 */
 }
 
+.Verification-button{
+	font-size: 32rpx;
+	width: auto;
+	height: 80rpx;
+	border: 1.5px solid #6966AD;
+	border-radius:154px;
+	background-color: #ffffff;
+	color: #6966AD;
+	text-align: center;
+	transition: all 0.3s ease;
+}
 
 
 .login-input {
-  flex:1;
-  height: 60rpx; /* 设置输入框高度 */
   font-size: 32rpx; /* 输入框内容的字体大小 */
   padding: 0 10rpx; /* 内边距 */
   text-align: center;
   // border: 1rpx solid #ccc; /* 边框样式 */
   // border-radius: 5rpx; /* 圆角 */
 }
+
+.Verification-input {
+  width: 260rpx;
+  font-size: 32rpx; /* 输入框内容的字体大小 */
+  padding: 0 10rpx; /* 内边距 */
+  text-align: center;
+}
+
 
 /* 设置 placeholder 的样式 */
 .login-input::placeholder {

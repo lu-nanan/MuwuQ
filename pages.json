@@ -58,14 +58,33 @@
 			{
 				"navigationBarTitleText" : "账号密码登录"
 			}
+		},
+		// {
+		// 	"path" : "F:/大三下学期/移动应用开发/prac/myprac/pages/Vclogin/Vclogin",
+		// 	"style" : 
+		// 	{
+		// 		"navigationBarTitleText" : "验证码登录"
+		// 	}
+		// },
+		{
+			"path" : "pages/VcLogin/VcLogin",
+			"style" : 
+			{
+				"navigationBarTitleText" : "验证码登录"
+			}
+		},
+		{
+			"path" : "pages/Register/Register",
+			"style" : 
+			{
+				"navigationBarTitleText" : "注册"
+			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app x",
-		"navigationBarBackgroundColor": "#fff8e1",
-		"backgroundColor": "#F8F8F8",
-		"background": "#fff3cd"
+		"navigationBarBackgroundColor": "#fff8e1"
 		
 	},
 	"uniIdRouter": {},
