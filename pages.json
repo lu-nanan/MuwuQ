@@ -11,13 +11,9 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "aaa",
 				"backgroundColorContent": "#fff3cd",
-				"buttons":[{
-					"type":"#ba55d3"
-					}
-				]
-				
+				"enablePullDownRefresh": false
 			}
 		},
 		{
@@ -64,7 +60,6 @@
 	"uniIdRouter": {},
 	"tabBar": {
 		"color": "#333333",
-		"borderStyle": "#f1f1f1",
 		"selectedColor": "#28a745",
 		"backgroundColor": "#fff8e1",
 		"list": [
