@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/login1",
+    "pages/index/index",
+    "pages/index/my",
+    "pages/index/cloudpan",
+    "pages/index/login2",
+    "pages/index/register"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app x",
+    "navigationBarBackgroundColor": "#fff8e1",
+    "backgroundColor": "#F8F8F8",
+    "background": "#fff3cd"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#28a745",
+    "backgroundColor": "#fff8e1",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/cloudpan",
+        "text": "云盘"
+      },
+      {
+        "pagePath": "pages/index/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

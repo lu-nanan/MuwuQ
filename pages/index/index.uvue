@@ -1,67 +1,112 @@
 <template>
-    <view>
-        <view class="picker-container">
-            <picker mode="selector" :range="options" @change="onPickerChange" :value="selectedIndex">
-                <view class="pickers">
-                    当前选择: {{ options[selectedIndex] }}
-                </view>
-            </picker>
-            <picker mode="selector" :range="options" @change="onPickerChange" :value="selectedIndex">
-                <view class="pickers">
-                    当前选择: {{ options[selectedIndex] }}
-                </view>
-            </picker>
-            <picker mode="selector" :range="options" @change="onPickerChange" :value="selectedIndex">
-                <view class="pickers">
-                    当前选择: {{ options[selectedIndex] }}
-                </view>
-            </picker>
-        </view>
-    </view>
+	<view>
+		<view class="picker-container">
+			<uni-data-select  @change="change" :localdata="range" label="排序" placement="bottom">
+				
+			</uni-data-select>
+
+		</view>
+		<uni-section title="本地数据" type="line">
+			<view class="uni-px-5 uni-pb-5">
+				<uni-data-select v-model="selectedIndex" :localdata="range" @change="change">
+					
+				</uni-data-select>
+			</view>
+		</uni-section>
+		<uni-search-bar @confirm="search" :focus="false" @blur="blur" @focus="focus" @input="input" @cancel="cancel" @clear="clear"></uni-search-bar>
+		<text>aaa</text>
+	</view>
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            title: 'Helloi',
-            options: ['选项1', '选项2', '选项3', '选项4'],
-            selectedIndex: 0
-        };
-    },
-    onLoad() {
-		
-	},
-    onReady() {
-    },
-    methods: {
-        onPickerChange(e) {
-            this.selectedIndex = e.detail.value;
-            console.log('选择的选项是:', this.options[this.selectedIndex]);
-        }
-    }
-};
+	export default {
+		data() {
+			return {
+				range: [{
+						"value": 0,
+						"text": "篮球",
+						"disable": true
+					},
+					{
+						"value": 1,
+						"text": "足球"
+					},
+					{
+						"value": 2,
+						"text": "游泳"
+					}
+				],
+				selectedIndex: 1
+			};
+		},
+		onLoad() {
+
+		},
+		onReady() {
+		},
+		methods: {
+			search(res) {
+				uni.showToast({
+					title: '搜索：' + res.value,
+					icon: 'none'
+				})
+			},
+			input(res) {
+				console.log('----input:', res)
+			},
+			clear(res) {
+				uni.showToast({
+					title: 'clear事件，清除值为：' + res.value,
+					icon: 'none'
+				})
+			},
+			blur(res) {
+				uni.showToast({
+					title: 'blur事件，输入值为：' + res.value,
+					icon: 'none'
+				})
+			},
+			focus(e) {
+				uni.showToast({
+					title: 'focus事件，输出值为：' + e.value,
+					icon: 'none'
+				})
+			},
+			cancel(res) {
+				uni.showToast({
+					title: '点击取消，输入值为：' + res.value,
+					icon: 'none'
+				})
+			},
+
+			change(e) {
+				console.log('e:', e);
+			}
+		}
+	};
 </script>
 
-<style>
-.picker-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px;
-}
+<style lang="scss">
+	.picker-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 10rpx;
+		width: 100%;
+	}
 
-.pickers {
-    padding: 20rpx;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 12rpx;
-}
+	.pickers {
+		padding-left: 10px;
+		padding-right: 10px;
 
-.circle-progress {
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin: 20px auto;
-}
-</style>    
+	}
+
+	.uni-px-5 {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.uni-pb-5 {
+		padding-bottom: 10px;
+	}
+</style>

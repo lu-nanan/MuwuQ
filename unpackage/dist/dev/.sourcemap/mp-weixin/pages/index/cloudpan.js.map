@@ -1,0 +1,1 @@
+{"version":3,"file":"cloudpan.js","sources":["../../../uniapp/HBuilderX/plugins/uniapp-cli-vite/uniPage:/cGFnZXMvaW5kZXgvY2xvdWRwYW4udXZ1ZQ"],"sourcesContent":["import MiniProgramPage from 'D:/xiaochengxu/xiangmu1/xiangmu111/pages/index/cloudpan.uvue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AACA,GAAG,WAAW,eAAe;"}

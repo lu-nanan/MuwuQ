@@ -11,7 +11,7 @@
             <input class="uni-input" placeholder="邮箱"></input>
             <input class="uni-input" placeholder="密码"></input>
 			<view class="box">
-				<text>验证方式</text>
+				<text style="color: white;">验证方式</text>
 				<button style="width: 30%;border-radius: 30rpx;background: #A4ADB3;color: rgba(255,255,255,1)">手机</button>
 				<button style="width: 30%;border-radius: 30rpx;background: #A4ADB3;color: rgba(255,255,255,1)">邮箱</button>
 			</view>
@@ -44,6 +44,7 @@ export default {
 .login-container {
     display: flex;
     justify-content: center;
+	background-color: black;
     align-items: center;
 	    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	    line-height: 18rpx;
