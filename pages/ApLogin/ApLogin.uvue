@@ -2,43 +2,40 @@ import uniIcons from '@/uni_modules/uni-icons/
 
 <template>
   <view class="login-container">
-		<!-- 背景图 -->
 		<view class="login-title">登录</view>
 		
 		
 		<view class="input-group">
 		  <uni-icons type="person" size="60rpx" color="#6966AD"></uni-icons>
-		  <input class="login-input" placeholder="账号/手机号/邮箱" />
+		  <input class="login-input" v-model="account" placeholder="账号/手机号/邮箱" />
 		</view>
 		
 		<view class="input-group">
 		  <uni-icons type="locked" size="60rpx" color="#6966AD"></uni-icons>
-		  <input class="login-input" placeholder="登录密码" />
+		  <input class="login-input" v-model="password" placeholder="登录密码" />
 		</view>
 
 		<view class="remeberme">
-			<checkbox value="checkbox1" :style="{ transform: 'scale(0.6)' }" />
-		    <text class="z-text">记住我</text>
+			<checkbox-group name="" @change="handleChange()">
+				<checkbox value="checkbox1" :style="{ transform: 'scale(0.6)' }" v-model="remeberOrNot"/>
+			</checkbox-group>
+			<text class="z-text">记住我</text>
 			<text class="w-text">忘记密码</text>
 		</view>
 		
 		<view>
-			<text class="y-text">验证码登录</text>
+		    <text class="y-text" @click="goVcLogin()">验证码登录</text>
 		</view>
 		
 		<view class="to-register">
 			<text class="rn-text">没有账号？</text>
-			<text class="r-text"> 点此注册</text>
+			<text class="r-text" @click="goRegister()"> 点此注册</text>
 		</view>
 		
 		<button class="login-button">登录</button>
 		
-<!-- 		<view class="bottom-con">
-			<text class="bottom-title">木屋</text>
-			<text class="bottom-title">MuwuTools</text>
-		</view> -->
-		
 		<image class="background-image" src="/static/login.png" mode="heightFix"></image>
+<!-- 		<button @click="show()">show</button> -->
   </view>
 </template>
 
@@ -46,10 +43,28 @@ import uniIcons from '@/uni_modules/uni-icons/
 export default {
   data() {
     return {
- 
+		remeberOrNot: false,
+		account: '',
+		password: '',
 	}
   },
   methods: {
+	  goVcLogin(){
+		  uni.navigateTo({
+		  	url:'../VcLogin/VcLogin'
+		  })
+	  },
+	  goRegister(){
+		  uni.navigateTo({
+		  	url:'../Register/Register'
+		  })
+	  },
+	  handleChange(){
+		  this.remeberOrNot = !this.remeberOrNot
+	  },
+	  show(){
+		  console.log(this.account, this.password)
+	  }
   }
 
 }
@@ -73,7 +88,6 @@ export default {
 }
 
 .input-group {
-  // display: flex; /* 水平排列图标和输入框 */
   margin-left: 5%;
   margin-top: 21rpx;
   margin-bottom: 20rpx;

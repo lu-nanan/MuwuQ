@@ -1,0 +1,64 @@
+<template>
+	<view style="width: 100%; height: 400rpx;">
+	  <qiun-data-charts type="ring" :chartData="chartData" :opts="opts" />
+	</view>
+</template>
+
+<script>
+	export default {
+	  data() {
+	    return {
+	      chartData: {},
+	      opts: {
+	        // 环图配置项
+	      }
+	    }
+	  },
+	  mounted() {
+	    this.initChart();
+	  },
+	  methods: {
+	    initChart() {
+	      // 示例数据：占比30%
+	      const total = 100; // 总量
+	      const value = 30;  // 当前值
+	
+	      this.chartData = {
+	        series: [{
+	          data: [
+	            { value: value, name: '占比', color: "#2FC25B" },
+	            { value: total - value, name: '剩余', color: "#EAEEF4" }
+	          ]
+	        }]
+	      };
+	
+	      this.opts = {
+	        title: {
+	          name: "占比环图",
+	          fontSize: 16,
+	          color: "#333"
+	        },
+	        subtitle: {
+	          name: `${((value/total)*100).toFixed(1)}%`, // 显示百分比
+	          color: "#2FC25B",
+	          fontSize: 24
+	        },
+	        extra: {
+	          ring: {
+	            ringWidth: 20,        // 环的宽度
+	            activeOpacity: 0.5,    // 激活透明度
+	            activeRadius: 10,     // 激活放大尺寸
+	            radius: 60,           // 外圆半径
+	            innerRadius: 50,      // 内圆半径（控制空心大小）
+	            labelAlign: "center"  // 标签居中
+	          },
+	          pie: {
+	            labelWidth: 15,       // 标签宽度
+	            border: false         // 不显示边框
+	          }
+	        }
+	      };
+	    }
+	  }
+	}
+</script>

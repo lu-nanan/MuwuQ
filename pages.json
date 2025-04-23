@@ -75,6 +75,13 @@
 			{
 				"navigationBarTitleText" : "注册"
 			}
+		},
+		{
+			"path" : "pages/testPage/testPage",
+			"style" : 
+			{
+				"navigationBarTitleText" : "测试页面"
+			}
 		}
 	],
 	"globalStyle": {
