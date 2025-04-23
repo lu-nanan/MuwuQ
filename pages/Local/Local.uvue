@@ -1,0 +1,133 @@
+<template>
+	<myNavagationBar></myNavagationBar>
+	<mySearchInput></mySearchInput>
+	<spaceUsageDisplay></spaceUsageDisplay>
+	<localFileList></localFileList>
+</template>
+
+<script>
+	import myNavagationBar from '@/components/myNavigationBar.uvue'
+	import mySearchInput from '@/components/mySearchInput.uvue'
+	import spaceUsageDisplay from '@/components/spaceUsageDisplay.uvue'
+	import localFileList from '@/components/localFileList.uvue'
+	
+	export default {
+		data() {
+			return {
+				// 示例文件数据
+				files: [
+					{
+						name: '文件夹1',
+						date: '2024-12-01',
+						size: '1.22G',
+						type: '文件夹',
+						selected: false
+					},
+					{
+						name: '文件夹2',
+						date: '2024-12-01',
+						size: '1.22G',
+						type: '文件夹',
+						selected: false
+					},
+					{
+						name: '旅行照片',
+						date: '2024-11-28',
+						size: '5.6M',
+						type: '图片',
+						selected: false
+					},
+					{
+						name: '工作报告',
+						date: '2024-11-25',
+						size: '2.3M',
+						type: '文档',
+						selected: false
+					},
+					{
+						name: '会议视频',
+						date: '2024-11-20',
+						size: '156M',
+						type: '视频',
+						selected: false
+					},
+					{
+						name: '语音备忘录',
+						date: '2024-11-18',
+						size: '3.2M',
+						type: '音频',
+						selected: false
+					},
+					{
+						name: '项目计划书',
+						date: '2024-11-15',
+						size: '1.8M',
+						type: '文档',
+						selected: false
+					},
+					{
+						name: '家庭视频',
+						date: '2024-11-10',
+						size: '230M',
+						type: '视频',
+						selected: false
+					},
+					{
+						name: '工作文件夹',
+						date: '2024-11-05',
+						size: '1.22G',
+						type: '文件夹',
+						selected: false
+					},
+					{
+						name: '系统备份',
+						date: '2024-11-01',
+						size: '4.5G',
+						type: '文件夹',
+						selected: false
+					}
+				]
+			}
+		},
+		// computed: {
+		// 	// 根据搜索文本和当前文件类型筛选文件
+		// 	filteredFiles() {
+		// 		return this.files.filter(file => {
+		// 			// 搜索文本过滤
+		// 			const matchSearch = this.searchText === '' ||
+		// 				file.name.toLowerCase().includes(this.searchText.toLowerCase());
+
+		// 			// 文件类型过滤
+		// 			const matchType = this.currentFile === '文件类型' ||
+		// 				this.currentFile === '所有文件' ||
+		// 				file.type === this.currentFile;
+
+		// 			return matchSearch && matchType;
+		// 		});
+		// 	}
+		// },
+		methods: {
+
+		},
+		components: {
+			myNavagationBar,
+			mySearchInput,
+			spaceUsageDisplay,
+			localFileList,
+		}
+	}
+</script>
+
+
+<style>
+/* 文件列表 */
+
+
+.file-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #f5f5f5;
+}
+</style>

@@ -21,7 +21,7 @@
 	    initChart() {
 	      // 示例数据：占比30%
 	      const total = 100; // 总量
-	      const value = 30;  // 当前值
+	      const value = 55;  // 当前值
 	
 	      this.chartData = {
 	        series: [{
@@ -49,7 +49,7 @@
 	            activeOpacity: 0.5,    // 激活透明度
 	            activeRadius: 10,     // 激活放大尺寸
 	            radius: 60,           // 外圆半径
-	            innerRadius: 50,      // 内圆半径（控制空心大小）
+	            innerRadius: 58,      // 内圆半径（控制空心大小）
 	            labelAlign: "center"  // 标签居中
 	          },
 	          pie: {

@@ -82,6 +82,14 @@
 			{
 				"navigationBarTitleText" : "测试页面"
 			}
+		},
+		{
+			"path" : "pages/Local/Local",
+			"style" : 
+			{
+				"navigationBarTitleText" : "本地",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
@@ -93,12 +101,12 @@
 	"uniIdRouter": {},
 	"tabBar": {
 		"color": "#333333",
-		"selectedColor": "#28a745",
-		"backgroundColor": "#fff8e1",
+		"selectedColor": "#8D8DC1",
+		"backgroundColor": "#ffffff",
 		"list": [
 			{
-				"pagePath": "pages/index/index",
-				"text": "首页"
+				"pagePath": "pages/Local/Local",
+				"text": "本地"
 			},
 			{
 				"pagePath": "pages/index/cloudpan",
