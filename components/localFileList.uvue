@@ -3,7 +3,9 @@
 		<view class="file-list-container">
 			<scroll-view scroll-y="true" class="file-scroll-view">
 				<view v-for="(file, index) in files" :key="index">
-					<localFileListItem :file="file" :isBatchModes="isBatchModes" @click="selected(file.name)" />
+					<view :class="{'file-item-container' : file.selected && isBatchModes}" @click="selected(file.name)">
+						<localFileListItem class="file-item" :file="file" :isBatchModes="isBatchModes" />
+					</view>
 				</view>
 			</scroll-view>
 		</view>
@@ -101,7 +103,7 @@
 				// 如果从 true 变为 false，输出被选中的文件并重置背景色
 				if (this.isBatchModes === true && e === false) {
 					const selectedFiles = this.files.filter(file => file.selected)
-					console.log('被选中的文件：', selectedFiles)
+					selectedFiles.forEach(file => (console.log(file.name)));
 					this.files.forEach(file => (file.selected = false))
 				}
 
@@ -117,13 +119,26 @@
 						}
 					});
 				}
-				console.log(name, this.isBatchModes)
+				this.files.forEach(file => {
+					if (file.name === name) {
+						console.log(file.name, file.selected)
+					}
+				})
 			}
 		}
 	}
 </script>
 
 <style>
+	.file-item{
+		width: 98%;
+		background-color: #fff;
+	}
+	
+	.file-item-container {
+		background-color: #FFD700;
+	}
+	
 	.file-list-container {
 		flex: 1;
 		margin: 0 15px;

@@ -1,9 +1,5 @@
 <template>
-  <view
-    class="file-item"
-    :style="{ backgroundColor: colors ? '#FFD700' : '#ffffff' }"
-    @click="$emit('click')"
-  >
+  <view class="file-item">
     <view class="file-icon">
       <text>📄</text>
     </view>
@@ -21,14 +17,13 @@
 
 <script>
 export default {
-  computed:{
-	  colors() {
-		  console.log(this.file.name, this.file.selected, this.isBatchModes)
-		  return this.file.selected && this.isBatchModes
+  props: ['file', 'isBatchModes'],
+  methods:{
+	  show() {
+		  console.log(this.file.selected)
 	  }
-  },
-  props: ['file', 'isBatchModes']
-}
+  }
+};
 </script>
 
 <style>
@@ -38,6 +33,10 @@ export default {
   align-items: center;
   padding: 12px 15px;
   border-bottom: 1px solid #f5f5f5;
+}
+
+.select {
+	background-color: aqua;
 }
 
 .file-icon {
