@@ -5,7 +5,7 @@
     <view class="login-box">
       <view class="login-textbox">
         <text class="login-title">登录</text>
-        <text class="y-text" @click="goVcLogin()">账号密码登录</text>
+        <text class="y-text" @click="goApLogin()">账号密码登录</text>
       </view>
       
       <view class="input-groups">
@@ -50,14 +50,14 @@ export default {
     }
   },
   methods: {
-    goVcLogin(){
+    goApLogin(){
       uni.navigateTo({
-        url:'../VcLogin/VcLogin'
+        url:'/pages/ApLogin/ApLogin'
       })
     },
     goRegister(){
       uni.navigateTo({
-        url:'../Register/Register'
+        url:'/pages/Register/Register'
       })
     },
     handleChange(){
@@ -91,6 +91,7 @@ export default {
 
 .login-box {
   width: 80%;
+  margin-top: 0%;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 24rpx;
   padding: 40rpx;

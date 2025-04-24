@@ -41,6 +41,7 @@
 			},
 			toggleBatchMode() {
 				this.isBatchMode = !this.isBatchMode;
+				uni.$emit('toggleBatchModes',this.isBatchMode)
 			}
 		}
 	}

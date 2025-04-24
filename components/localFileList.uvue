@@ -3,7 +3,7 @@
 		<view class="file-list-container">
 			<scroll-view scroll-y="true" class="file-scroll-view">
 				<view v-for="(file, index) in files" :key="index">
-					<localFileListItem :file="file" />
+					<localFileListItem :file="file" :isBatchModes="isBatchModes" @click="selected(file.name)" />
 				</view>
 			</scroll-view>
 		</view>
@@ -16,7 +16,7 @@
 	export default {
 		data() {
 			return {
-				// 示例文件数据
+				isBatchModes: false,
 				files: [
 					{
 						name: '文件夹1',
@@ -72,7 +72,7 @@
 						date: '2024-11-10',
 						size: '230M',
 						type: '视频',
-						selected: false
+						selected: true
 					},
 					{
 						name: '工作文件夹',
@@ -93,21 +93,47 @@
 		},
 		components: {
 			localFileListItem,
+		},
+		created() {
+			uni.$on('toggleBatchModes', (e) => {
+				console.log('监听到事件，携带参数为：' + e)
+
+				// 如果从 true 变为 false，输出被选中的文件并重置背景色
+				if (this.isBatchModes === true && e === false) {
+					const selectedFiles = this.files.filter(file => file.selected)
+					console.log('被选中的文件：', selectedFiles)
+					this.files.forEach(file => (file.selected = false))
+				}
+
+				this.isBatchModes = e
+			})
+		},
+		methods: {
+			selected(name) {
+				if (this.isBatchModes === true) {
+					this.files.forEach(file => {
+						if (file.name === name) {
+							file.selected = !file.selected;
+						}
+					});
+				}
+				console.log(name, this.isBatchModes)
+			}
 		}
 	}
 </script>
 
 <style>
-.file-list-container {
-  flex: 1;
-  margin: 0 15px;
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
+	.file-list-container {
+		flex: 1;
+		margin: 0 15px;
+		background-color: #fff;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	}
 
-.file-scroll-view {
-  height: 100%;
-}
+	.file-scroll-view {
+		height: 100%;
+	}
 </style>
