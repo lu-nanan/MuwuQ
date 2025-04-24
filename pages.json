@@ -4,31 +4,29 @@
 			"path" : "pages/index/login1",
 			"style" : 
 			{
-				"navigationBarTitleText" : "1",
-				"backgroundColorContent": "#324148"
+				"navigationBarTitleText" : "1"
 			}
 		},
 		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "aaa",
-				"backgroundColorContent": "#fff3cd",
 				"enablePullDownRefresh": false
 			}
 		},
 		{
 		"path": "pages/index/my",
 		"style": {
-			"navigationBarTitleText": "uni-app 1",
-			"backgroundColorContent": "#fff3cd"
+			"navigationBarTitleText": "uni-app 1"
+			// "backgroundColorContent": "#fff3cd"
 			
 			}
 		},
 		{
 		"path": "pages/index/cloudpan",
 		"style": {
-			"navigationBarTitleText": "uni-app 1",
-			"backgroundColorContent": "#fff3cd"
+			"navigationBarTitleText": "uni-app 1"
+			// "backgroundColorContent": "#fff3cd"
 			}
 		},
 		
@@ -44,8 +42,8 @@
 			"path" : "pages/index/register",
 			"style" : 
 			{
-				"navigationBarTitleText" : "",
-				"backgroundColorContent": "#324148"
+				"navigationBarTitleText" : ""
+				// "backgroundColorContent": "#324148"
 			}
 		},
 		{
@@ -88,7 +86,8 @@
 			"style" : 
 			{
 				"navigationBarTitleText" : "本地",
-				"navigationStyle": "custom"
+				"navigationStyle": "custom",
+				"backgroundColorContent": "#8D8DC1"
 			}
 		}
 	],

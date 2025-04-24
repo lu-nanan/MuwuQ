@@ -6,7 +6,7 @@
 					<view class="chart-container">
 						<view class="chart-inner">
 							<view class="ring-progress"
-								:style="{ background: `conic-gradient(#2FC25B ${usedPercent}%, #EAEEF4 0%)` }">
+								:style="{ background: `conic-gradient(#FFD700 ${usedPercents}%, #EAEEF4 0%)` }">
 								<view class="ring-inner">
 		<!-- 							<text class="percentage">{{ Math.round(usedPercent) }}%</text> -->
 									<text class="usage-label">内存使用率</text>
@@ -25,6 +25,9 @@
 							<text class="label">文件数目</text>
 							<text class="value">{{ fileCount }} 个</text>
 						</view>
+						<view class="data-item">
+							<text class="infos">已用 {{usePercentages}}, 可放心使用</text>
+						</view>
 					</view>
 				</view>
 			</view>
@@ -38,9 +41,15 @@
 			return {
 				usedStorage: '3.2GB',
 				totalStorage: '8.0GB',
-				usedPercent: 40,  // 40% 已使用
+				usedPercents: 40,
 				fileCount: 152
 			};
+		},
+		computed:{
+			usePercentages: function() {
+				let usedPercent = 40
+				return usedPercent + "%"
+			}
 		}
 	}
 </script>
@@ -61,14 +70,14 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 40rpx 20rpx;
-		background: #ffffff;
+		background: #8d8dc1;
 		border-radius: 10rpx;
 /* 		box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05); */
 	}
 
 	/* 环状图容器 */
 	.chart-container {
-		width: 50%;
+		width: 38%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -111,8 +120,9 @@
 	}
 
 	.usage-label {
+		position: absolute;
 		font-size: 24rpx;
-		color: #000000;
+		color: #ffffff;
 /* 		margin-top: 6rpx; */
 	}
 
@@ -134,13 +144,19 @@
 	.label {
 		display: block;
 		font-size: 26rpx;
-		color: #999;
+		color: #dfdfdf;
 		margin-bottom: 8rpx;
 	}
 
 	.value {
 		font-size: 32rpx;
-		color: #333;
+		color: #ffffff;
 		font-weight: bold;
+	}
+	
+	.infos{
+		font-size: 26rpx;
+		color: #ffffff;
+		margin-bottom: 8rpx;
 	}
 </style>
