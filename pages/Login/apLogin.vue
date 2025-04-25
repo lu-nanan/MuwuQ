@@ -2,6 +2,7 @@
 	<view class="login-container">
 		<image class="background-image" src="/static/login3.png" mode="heightFix"></image>
 
+<<<<<<< HEAD
 		<view class="login-box">
 			<view class="login-textbox">
 				<text class="login-title">登录</text>
@@ -122,6 +123,60 @@
 			},
 		}
 	}
+=======
+        <view class="remeberme">
+          <checkbox-group name="" @change="handleChange()">
+            <checkbox value="checkbox1" :style="{ transform: 'scale(0.6)' }" v-model="remeberOrNot"/>
+          </checkbox-group>
+          <text class="z-text">记住我</text>
+          <text class="w-text">忘记密码</text>
+        </view>
+        
+        <button class="login-button" @click="goLogin()">登录</button>
+        
+        <view class="to-register">
+          <text class="rn-text">没有账号？</text>
+          <text class="r-text" @click="goRegister()"> 点此注册</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      remeberOrNot: false,
+      account: '',
+      password: '',
+    }
+  },
+  methods: {
+    goVcLogin(){
+      uni.navigateTo({
+        url:'../VcLogin/VcLogin'
+      })
+    },
+    goRegister(){
+      uni.navigateTo({
+        url:'../Register/Register'
+      })
+    },
+	goLogin(){
+	  uni.switchTab({
+	    url:'../index/index'
+	  })
+	},
+    handleChange(){
+      this.remeberOrNot = !this.remeberOrNot
+    },
+    show(){
+      console.log(this.account, this.password)
+    }
+  }
+}
+>>>>>>> 69f32b642552b8d520a76031ee5849bcd6bd0a57
 </script>
 
 <style lang="scss">
