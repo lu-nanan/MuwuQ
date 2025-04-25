@@ -1,1 +1,0 @@
-<view id="{{b}}" change:eS="{{uV.sS}}" eS="{{$eS[b]}}" change:eA="{{uV.sA}}" eA="{{$eA[b]}}" class="{{['container', 'data-v-72b39eeb', virtualHostClass]}}" style="{{virtualHostStyle}}" hidden="{{virtualHostHidden || false}}"><button class="data-v-72b39eeb" bindtap="{{a}}">测试后端连接</button></view><wxs src="/common/uniView.wxs" module="uV"/>
