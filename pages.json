@@ -1,6 +1,20 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path" : "pages/Login/apLogin",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/Login/vcLogin",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "uni-app",
@@ -14,7 +28,30 @@
 			{
 				"navigationBarTitleText" : "本地页面"
 			}
+		},
+		{
+			"path" : "pages/ShareHistory/ShareHistory",
+			"style" : 
+			{
+				"navigationBarTitleText" : "历史"
+			}
+		},
+		{
+			"path" : "pages/My/My",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/ChangePass/ChangePass",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
 		}
+		
+		
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -37,7 +74,7 @@
 					"text": "云盘"
 				},
 				{
-					"pagePath": "pages/Login/apLogin",
+					"pagePath": "pages/My/My",
 					"text": "我的"
 				}
 			]

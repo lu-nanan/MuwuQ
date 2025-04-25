@@ -39,6 +39,5 @@
 
 <style>
 .searchbar{
-	margin-top: 15%;
 }
 </style>

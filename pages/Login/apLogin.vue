@@ -27,7 +27,7 @@
           <text class="w-text">忘记密码</text>
         </view>
         
-        <button class="login-button">登录</button>
+        <button class="login-button" @click="goLogin()">登录</button>
         
         <view class="to-register">
           <text class="rn-text">没有账号？</text>
@@ -58,6 +58,11 @@ export default {
         url:'../Register/Register'
       })
     },
+	goLogin(){
+	  uni.switchTab({
+	    url:'../index/index'
+	  })
+	},
     handleChange(){
       this.remeberOrNot = !this.remeberOrNot
     },
