@@ -14,6 +14,13 @@
 			{
 				"navigationBarTitleText" : "本地页面"
 			}
+		},
+		{
+			"path" : "pages/Login/apLogin",
+			"style" : 
+			{
+				"navigationBarTitleText" : "账号密码登录"
+			}
 		}
 	],
 	"globalStyle": {
