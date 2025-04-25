@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<myNavagationBar></myNavagationBar>
-		<mySearchInput style="margin-top:15% ;"></mySearchInput>
+		<mySearchInput></mySearchInput>
 		<spaceUsageDisplay></spaceUsageDisplay>
 		<cloudFileList></cloudFileList>
 	</view>

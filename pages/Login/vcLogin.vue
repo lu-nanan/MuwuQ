@@ -17,19 +17,10 @@
 				<view class="input-group">
 					<uni-icons type="locked" size="60rpx" color="#6966AD"></uni-icons>
 					<input class="login-input" v-model="password" placeholder="验证码" />
-					<button class="Verification-button">获取</button>
+					<button class="Verification-button" @click="getVerification()">获取</button>
 				</view>
 
-				<!--        <view class="remeberme">
-          <checkbox-group name="" @change="handleChange()">
-            <checkbox value="checkbox1" :style="{ transform: 'scale(0.6)' }" v-model="remeberOrNot"/>
-          </checkbox-group>
-          <text class="z-text">记住我</text>
-          <text class="w-text">忘记密码</text>
-        </view>
-        -->
-
-				<button class="login-button">登录</button>
+				<button class="login-button" @click="checkVerification()">登录</button>
 
 				<view class="to-register">
 					<text class="rn-text">没有账号？</text>
@@ -52,7 +43,7 @@
 		methods: {
 			goApLogin() {
 				uni.navigateTo({
-					url: '/pages/ApLogin/ApLogin'
+					url: '/pages/Login/apLogin'
 				})
 			},
 			goRegister() {
@@ -60,12 +51,109 @@
 					url: '/pages/Register/Register'
 				})
 			},
-			handleChange() {
-				this.remeberOrNot = !this.remeberOrNot
+			// 获取验证码
+			async getVerification() {
+				const account = this.account.trim();
+				if (!account) {
+					uni.showToast({
+						title: '请输入邮箱',
+						icon: 'none'
+					});
+					return;
+				}
+
+				// 简单邮箱格式验证
+				const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+				if (!emailRegex.test(account)) {
+					uni.showToast({
+						title: '请输入有效的邮箱地址',
+						icon: 'none'
+					});
+					return;
+				}
+
+				try {
+					const res = await uni.request({
+						url: 'https://274c7adb.r21.cpolar.top/verification/send',
+						method: 'POST',
+						data: {
+							email: account
+						}, // 传递邮箱
+						header: {
+							'Content-Type': 'application/x-www-form-urlencoded', // 表单格式
+						},
+					});
+
+					if (res.data === '验证码发送成功。') {
+						uni.showToast({
+							title: '验证码已发送',
+							icon: 'success'
+						});
+					} else {
+						uni.showToast({
+							title: res.data,
+							icon: 'none'
+						}); // 显示后端错误信息
+					}
+				} catch (error) {
+					uni.showToast({
+						title: '发送失败，请重试',
+						icon: 'none'
+					});
+					console.error('发送验证码错误:', error);
+				}
 			},
-			show() {
-				console.log(this.account, this.password)
-			}
+
+			// 验证验证码并登录
+			async checkVerification() {
+				const account = this.account.trim();
+				const code = this.password.trim();
+				if (!account || !code) {
+					uni.showToast({
+						title: '请输入邮箱和验证码',
+						icon: 'none'
+					});
+					return;
+				}
+
+				try {
+					const res = await uni.request({
+						url: 'https://274c7adb.r21.cpolar.top/verification/verify',
+						method: 'POST',
+						data: {
+							email: account,
+							code
+						}, // 传递邮箱和验证码
+						header: {
+							'Content-Type': 'application/x-www-form-urlencoded',
+						},
+					});
+
+					if (res.data === '验证码验证成功。') {
+						uni.showToast({
+							title: '登录成功',
+							icon: 'success'
+						});
+						// 保存登录状态（示例）
+						uni.setStorageSync('isLoggedIn', true);
+						// 跳转到首页
+						uni.reLaunch({
+							url: '/pages/index/index'
+						});
+					} else {
+						uni.showToast({
+							title: res.data,
+							icon: 'none'
+						});
+					}
+				} catch (error) {
+					uni.showToast({
+						title: '验证失败，请重试',
+						icon: 'none'
+					});
+					console.error('验证码验证错误:', error);
+				}
+			},
 		}
 	}
 </script>

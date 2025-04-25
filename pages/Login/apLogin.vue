@@ -16,7 +16,7 @@
 
 				<view class="input-group">
 					<uni-icons type="locked" size="60rpx" color="#6966AD"></uni-icons>
-					<input class="login-input" type="safe-password" v-model="password" placeholder="登录密码" />
+					<input class="login-input" type="password" v-model="password" placeholder="登录密码" />
 				</view>
 
 				<view class="remeberme">
@@ -50,12 +50,12 @@
 		methods: {
 			goVcLogin() {
 				uni.navigateTo({
-					url: '@/pages/Login/vcLogin'
+					url: '/pages/Login/vcLogin'
 				})
 			},
 			goRegister() {
 				uni.navigateTo({
-					url: '@/pages/Register/register'
+					url: '/pages/Register/Register'
 				})
 			},
 			handleChange() {

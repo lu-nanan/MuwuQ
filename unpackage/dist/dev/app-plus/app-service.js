@@ -38,7 +38,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$8 = {
+  const _sfc_main$e = {
     data() {
       return {
         sortOptions: ["最近使用", "最久未用", "从大到小", "从小到大"],
@@ -61,7 +61,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
       vue.createElementVNode("view", { class: "custom-navbar" }, [
         vue.createCommentVNode(" 排序方式 "),
@@ -112,7 +112,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const myNavagationBar = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-77ec4929"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/components/myNavigationBar.vue"]]);
+  const myNavagationBar = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-77ec4929"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/components/myNavigationBar.vue"]]);
   function formatAppLog(type, filename, ...args) {
     if (uni.__log__) {
       uni.__log__(type, filename, ...args);
@@ -773,7 +773,7 @@ if (uni.restoreGlobal) {
     const reg = /^[0-9]*$/g;
     return typeof val === "number" || reg.test(val) ? val + "px" : val;
   };
-  const _sfc_main$7 = {
+  const _sfc_main$d = {
     name: "UniIcons",
     emits: ["click"],
     props: {
@@ -827,7 +827,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "text",
       {
@@ -842,7 +842,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-d31e1c47"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
+  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-d31e1c47"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
   const isObject = (val) => val !== null && typeof val === "object";
   const defaultDelimiters = ["{", "}"];
   class BaseFormatter {
@@ -1149,7 +1149,7 @@ if (uni.restoreGlobal) {
   const {
     t
   } = initVueI18n(messages);
-  const _sfc_main$6 = {
+  const _sfc_main$c = {
     name: "UniSearchBar",
     emits: ["input", "update:modelValue", "clear", "cancel", "confirm", "blur", "focus"],
     props: {
@@ -1291,7 +1291,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$1);
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-searchbar" }, [
       vue.createElementVNode(
@@ -1367,8 +1367,8 @@ if (uni.restoreGlobal) {
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-f07ef577"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue"]]);
-  const _sfc_main$5 = {
+  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-f07ef577"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue"]]);
+  const _sfc_main$b = {
     data() {
       return {};
     },
@@ -1396,7 +1396,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uni_search_bar = resolveEasycom(vue.resolveDynamicComponent("uni-search-bar"), __easycom_0);
     return vue.openBlock(), vue.createElementBlock("view", null, [
       vue.createVNode(_component_uni_search_bar, {
@@ -1409,8 +1409,8 @@ if (uni.restoreGlobal) {
       }, null, 8, ["onConfirm", "onBlur", "onFocus"])
     ]);
   }
-  const mySearchInput = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__scopeId", "data-v-d7055f20"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/components/mySearchInput.vue"]]);
-  const _sfc_main$4 = {
+  const mySearchInput = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-d7055f20"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/components/mySearchInput.vue"]]);
+  const _sfc_main$a = {
     name: "spaceUsageDisplay",
     data() {
       return {
@@ -1427,7 +1427,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, [
       vue.createElementVNode("view", { class: "content-wrapper" }, [
         vue.createElementVNode("view", { class: "content" }, [
@@ -1487,11 +1487,264 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const spaceUsageDisplay = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-0131ded6"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/components/spaceUsageDisplay.vue"]]);
-  const _sfc_main$3 = {
+  const spaceUsageDisplay = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__scopeId", "data-v-0131ded6"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/components/spaceUsageDisplay.vue"]]);
+  const _sfc_main$9 = {
+    props: ["file"],
+    data() {
+      return {
+        // name: "�ļ���1",
+        // date: "2024-12-1",
+        // size: "123G",
+        // tag: "����"
+      };
+    }
+  };
+  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "file-item" }, [
+      vue.createElementVNode("view", { class: "file-icon" }, [
+        vue.createElementVNode("text", null, "haha")
+      ]),
+      vue.createElementVNode("view", { class: "file-divider" }),
+      vue.createElementVNode("view", { class: "file-info" }, [
+        vue.createElementVNode("view", { class: "file-nametag" }, [
+          vue.createElementVNode(
+            "text",
+            { class: "file-name" },
+            vue.toDisplayString($props.file.name),
+            1
+            /* TEXT */
+          ),
+          vue.createElementVNode(
+            "view",
+            { class: "file-tag" },
+            vue.toDisplayString($props.file.tag),
+            1
+            /* TEXT */
+          )
+        ]),
+        vue.createElementVNode("view", { class: "file-datesize" }, [
+          vue.createElementVNode(
+            "text",
+            { class: "file-date" },
+            vue.toDisplayString($props.file.date),
+            1
+            /* TEXT */
+          ),
+          vue.createElementVNode(
+            "text",
+            { class: "file-size" },
+            vue.toDisplayString($props.file.size),
+            1
+            /* TEXT */
+          )
+        ])
+      ])
+    ]);
+  }
+  const cloudFileListItem = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__scopeId", "data-v-cde9d81a"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/components/cloudFileListItem.vue"]]);
+  const _sfc_main$8 = {
+    data() {
+      return {
+        isBatchModes: false,
+        files: [
+          {
+            name: "文件夹1",
+            date: "2024-12-01",
+            size: "1.22G",
+            type: "文件夹",
+            selected: false,
+            tag: "工作"
+          },
+          {
+            name: "文件夹2",
+            date: "2024-12-01",
+            size: "1.22G",
+            type: "文件夹",
+            selected: false,
+            tag: "工作"
+          },
+          {
+            name: "旅行照片",
+            date: "2024-11-28",
+            size: "5.6M",
+            type: "图片",
+            selected: false,
+            tag: "工作"
+          },
+          {
+            name: "工作报告",
+            date: "2024-11-25",
+            size: "2.3M",
+            type: "文档",
+            selected: false,
+            tag: "工作"
+          },
+          {
+            name: "会议视频",
+            date: "2024-11-20",
+            size: "156M",
+            type: "视频",
+            selected: false,
+            tag: "工作"
+          },
+          {
+            name: "语音备忘录",
+            date: "2024-11-18",
+            size: "3.2M",
+            type: "音频",
+            selected: false,
+            tag: "工作"
+          },
+          {
+            name: "项目计划书",
+            date: "2024-11-15",
+            size: "1.8M",
+            type: "文档",
+            selected: false,
+            tag: "工作"
+          },
+          {
+            name: "家庭视频",
+            date: "2024-11-10",
+            size: "230M",
+            type: "视频",
+            selected: true,
+            tag: "工作"
+          },
+          {
+            name: "工作文件夹",
+            date: "2024-11-05",
+            size: "1.22G",
+            type: "文件夹",
+            selected: false,
+            tag: "工作"
+          },
+          {
+            name: "系统备份",
+            date: "2024-11-01",
+            size: "4.5G",
+            type: "文件夹",
+            selected: false,
+            tag: "工作"
+          }
+        ]
+      };
+    },
+    components: {
+      cloudFileListItem
+    },
+    created() {
+      uni.$on("toggleBatchModes", (function(e) {
+        formatAppLog("log", "at components/cloudFileList.vue:111", "监听到事件，携带参数为：" + e);
+        if (this.isBatchModes === true && e === false) {
+          const selectedFiles = this.files.filter(function(file) {
+            return file.selected;
+          });
+          for (let i = 0; i < selectedFiles.length; i++) {
+            formatAppLog("log", "at components/cloudFileList.vue:120", selectedFiles[i].name);
+          }
+          for (let i = 0; i < this.files.length; i++) {
+            this.files[i].selected = false;
+          }
+        }
+        this.isBatchModes = e;
+      }).bind(this));
+    },
+    methods: {
+      selected(name) {
+        if (this.isBatchModes === true) {
+          for (let i = 0; i < this.files.length; i++) {
+            if (this.files[i].name === name) {
+              this.files[i].selected = !this.files[i].selected;
+              break;
+            }
+          }
+        }
+        for (let i = 0; i < this.files.length; i++) {
+          if (this.files[i].name === name) {
+            formatAppLog("log", "at components/cloudFileList.vue:144", this.files[i].name, this.files[i].selected);
+            break;
+          }
+        }
+      }
+    }
+  };
+  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_cloudFileListItem = vue.resolveComponent("cloudFileListItem");
+    return vue.openBlock(), vue.createElementBlock("view", null, [
+      vue.createElementVNode("view", { class: "file-list-container" }, [
+        vue.createElementVNode("scroll-view", {
+          "scroll-y": "true",
+          class: "file-scroll-view"
+        }, [
+          (vue.openBlock(true), vue.createElementBlock(
+            vue.Fragment,
+            null,
+            vue.renderList($data.files, (file, index) => {
+              return vue.openBlock(), vue.createElementBlock("view", { key: index }, [
+                vue.createElementVNode("view", {
+                  class: vue.normalizeClass({ "file-item-container": file.selected && $data.isBatchModes }),
+                  onClick: ($event) => $options.selected(file.name)
+                }, [
+                  vue.createVNode(_component_cloudFileListItem, {
+                    class: "file-item",
+                    file
+                  }, null, 8, ["file"])
+                ], 10, ["onClick"])
+              ]);
+            }),
+            128
+            /* KEYED_FRAGMENT */
+          ))
+        ])
+      ])
+    ]);
+  }
+  const cloudFileList = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-6947bb4a"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/components/cloudFileList.vue"]]);
+  const _sfc_main$7 = {
+    data() {
+      return {};
+    },
+    // computed: {
+    // 	// 根据搜索文本和当前文件类型筛选文件
+    // 	filteredFiles() {
+    // 		return this.files.filter(file => {
+    // 			// 搜索文本过滤
+    // 			const matchSearch = this.searchText === '' ||
+    // 				file.name.toLowerCase().includes(this.searchText.toLowerCase());
+    // 			// 文件类型过滤
+    // 			const matchType = this.currentFile === '文件类型' ||
+    // 				this.currentFile === '所有文件' ||
+    // 				file.type === this.currentFile;
+    // 			return matchSearch && matchType;
+    // 		});
+    // 	}
+    // },
+    methods: {},
+    components: {
+      myNavagationBar,
+      mySearchInput,
+      spaceUsageDisplay,
+      cloudFileList
+    }
+  };
+  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_myNavagationBar = vue.resolveComponent("myNavagationBar");
+    const _component_mySearchInput = vue.resolveComponent("mySearchInput");
+    const _component_spaceUsageDisplay = vue.resolveComponent("spaceUsageDisplay");
+    const _component_cloudFileList = vue.resolveComponent("cloudFileList");
+    return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
+      vue.createVNode(_component_myNavagationBar),
+      vue.createVNode(_component_mySearchInput),
+      vue.createVNode(_component_spaceUsageDisplay),
+      vue.createVNode(_component_cloudFileList)
+    ]);
+  }
+  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/pages/index/index.vue"]]);
+  const _sfc_main$6 = {
     props: ["file"]
   };
-  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "file-item" }, [
       vue.createElementVNode("view", { class: "file-icon" }, [
         vue.createElementVNode("text", null, "haha")
@@ -1524,8 +1777,8 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const localFileListItem = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__scopeId", "data-v-1262fcc0"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/components/localFileListItem.vue"]]);
-  const _sfc_main$2 = {
+  const localFileListItem = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-1262fcc0"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/components/localFileListItem.vue"]]);
+  const _sfc_main$5 = {
     data() {
       return {
         isBatchModes: false,
@@ -1642,7 +1895,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_localFileListItem = vue.resolveComponent("localFileListItem");
     return vue.openBlock(), vue.createElementBlock("view", null, [
       vue.createElementVNode("view", { class: "file-list-container" }, [
@@ -1673,8 +1926,8 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const localFileList = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__scopeId", "data-v-6d6010fe"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/components/localFileList.vue"]]);
-  const _sfc_main$1 = {
+  const localFileList = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__scopeId", "data-v-6d6010fe"], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/components/localFileList.vue"]]);
+  const _sfc_main$4 = {
     data() {
       return {};
     },
@@ -1701,7 +1954,7 @@ if (uni.restoreGlobal) {
       localFileList
     }
   };
-  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_myNavagationBar = vue.resolveComponent("myNavagationBar");
     const _component_mySearchInput = vue.resolveComponent("mySearchInput");
     const _component_spaceUsageDisplay = vue.resolveComponent("spaceUsageDisplay");
@@ -1713,8 +1966,471 @@ if (uni.restoreGlobal) {
       vue.createVNode(_component_localFileList)
     ]);
   }
-  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/pages/index/index.vue"]]);
+  const PagesLocalLocal = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/pages/local/local.vue"]]);
+  const _imports_0$1 = "/static/login3.png";
+  const _sfc_main$3 = {
+    data() {
+      return {
+        remeberOrNot: false,
+        account: "",
+        password: ""
+      };
+    },
+    methods: {
+      goVcLogin() {
+        uni.navigateTo({
+          url: "/pages/Login/vcLogin"
+        });
+      },
+      goRegister() {
+        uni.navigateTo({
+          url: "/pages/Register/Register"
+        });
+      },
+      handleChange() {
+        this.remeberOrNot = !this.remeberOrNot;
+        formatAppLog("log", "at pages/Login/apLogin.vue:63", this.remeberOrNot);
+      },
+      show() {
+        formatAppLog("log", "at pages/Login/apLogin.vue:66", this.account, this.password);
+      },
+      async checkPassword() {
+        if (!this.account.trim()) {
+          uni.showToast({
+            title: "请输入账号",
+            icon: "none"
+          });
+          return;
+        }
+        if (!this.password.trim()) {
+          uni.showToast({
+            title: "请输入密码",
+            icon: "none"
+          });
+          return;
+        }
+        const url = "https://274c7adb.r21.cpolar.top/auth/login";
+        const data = {
+          account: this.account,
+          password: this.password
+        };
+        try {
+          const res = await uni.request({
+            url,
+            method: "POST",
+            data,
+            header: {
+              "Content-Type": "application/json"
+            }
+          });
+          if (res.data === "登录成功") {
+            uni.showToast({
+              title: "登录成功",
+              icon: "success"
+            });
+            uni.setStorageSync("isLoggedIn", true);
+            uni.reLaunch({
+              url: "/pages/index/index"
+            });
+          } else {
+            uni.showToast({
+              title: res.data,
+              icon: "none"
+            });
+          }
+        } catch (error) {
+          uni.showToast({
+            title: "网络请求失败",
+            icon: "none"
+          });
+          formatAppLog("error", "at pages/Login/apLogin.vue:120", error);
+        }
+      }
+    }
+  };
+  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$1);
+    return vue.openBlock(), vue.createElementBlock("view", { class: "login-container" }, [
+      vue.createElementVNode("image", {
+        class: "background-image",
+        src: _imports_0$1,
+        mode: "heightFix"
+      }),
+      vue.createElementVNode("view", { class: "login-box" }, [
+        vue.createElementVNode("view", { class: "login-textbox" }, [
+          vue.createElementVNode("text", { class: "login-title" }, "登录"),
+          vue.createElementVNode("text", {
+            class: "y-text",
+            onClick: _cache[0] || (_cache[0] = ($event) => $options.goVcLogin())
+          }, "验证码登录")
+        ]),
+        vue.createElementVNode("view", { class: "input-groups" }, [
+          vue.createElementVNode("view", { class: "input-group" }, [
+            vue.createVNode(_component_uni_icons, {
+              type: "person",
+              size: "60rpx",
+              color: "#6966AD"
+            }),
+            vue.withDirectives(vue.createElementVNode(
+              "input",
+              {
+                class: "login-input",
+                "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => $data.account = $event),
+                placeholder: "账号/手机号/邮箱"
+              },
+              null,
+              512
+              /* NEED_PATCH */
+            ), [
+              [vue.vModelText, $data.account]
+            ])
+          ]),
+          vue.createElementVNode("view", { class: "input-group" }, [
+            vue.createVNode(_component_uni_icons, {
+              type: "locked",
+              size: "60rpx",
+              color: "#6966AD"
+            }),
+            vue.withDirectives(vue.createElementVNode(
+              "input",
+              {
+                class: "login-input",
+                type: "password",
+                "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => $data.password = $event),
+                placeholder: "登录密码"
+              },
+              null,
+              512
+              /* NEED_PATCH */
+            ), [
+              [vue.vModelText, $data.password]
+            ])
+          ]),
+          vue.createElementVNode("view", { class: "remeberme" }, [
+            vue.createElementVNode(
+              "checkbox-group",
+              {
+                name: "",
+                onChange: _cache[3] || (_cache[3] = ($event) => $options.handleChange())
+              },
+              [
+                vue.createElementVNode(
+                  "checkbox",
+                  {
+                    value: "checkbox1",
+                    style: vue.normalizeStyle({ transform: "scale(0.6)" })
+                  },
+                  null,
+                  4
+                  /* STYLE */
+                )
+              ],
+              32
+              /* NEED_HYDRATION */
+            ),
+            vue.createElementVNode("text", { class: "z-text" }, "记住我"),
+            vue.createElementVNode("text", { class: "w-text" }, "忘记密码")
+          ]),
+          vue.createElementVNode("button", {
+            class: "login-button",
+            onClick: _cache[4] || (_cache[4] = ($event) => $options.checkPassword())
+          }, "登录"),
+          vue.createElementVNode("view", { class: "to-register" }, [
+            vue.createElementVNode("text", { class: "rn-text" }, "没有账号？"),
+            vue.createElementVNode("text", {
+              class: "r-text",
+              onClick: _cache[5] || (_cache[5] = ($event) => $options.goRegister())
+            }, " 点此注册")
+          ])
+        ])
+      ])
+    ]);
+  }
+  const PagesLoginApLogin = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/pages/Login/apLogin.vue"]]);
+  const _imports_0 = "/static/register.png";
+  const _sfc_main$2 = {
+    data() {
+      return {
+        imageURL: "/static/register.png"
+      };
+    },
+    methods: {}
+  };
+  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$1);
+    return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
+      vue.createElementVNode("image", {
+        class: "background-image",
+        src: _imports_0,
+        mode: "heightFix"
+      }),
+      vue.createElementVNode("view", { class: "login-container" }, [
+        vue.createElementVNode("view", { class: "login-title" }, "注册"),
+        vue.createElementVNode("view", { class: "input-group" }, [
+          vue.createVNode(_component_uni_icons, {
+            type: "phone",
+            size: "60rpx",
+            color: "#6966AD"
+          }),
+          vue.createElementVNode("input", {
+            class: "login-input",
+            placeholder: "请输入你的手机号"
+          })
+        ]),
+        vue.createElementVNode("view", { class: "input-group" }, [
+          vue.createVNode(_component_uni_icons, {
+            type: "email",
+            size: "60rpx",
+            color: "#6966AD"
+          }),
+          vue.createElementVNode("input", {
+            class: "login-input",
+            placeholder: "请输入你的邮箱"
+          })
+        ]),
+        vue.createElementVNode("view", { class: "input-group" }, [
+          vue.createVNode(_component_uni_icons, {
+            type: "auth",
+            size: "60rpx",
+            color: "#6966AD"
+          }),
+          vue.createElementVNode("input", {
+            class: "Verification-input",
+            placeholder: "请输入你的验证码"
+          }),
+          vue.createElementVNode("button", { class: "Verification-button" }, "获取")
+        ]),
+        vue.createElementVNode("view", { class: "input-group" }, [
+          vue.createVNode(_component_uni_icons, {
+            type: "locked",
+            size: "60rpx",
+            color: "#6966AD"
+          }),
+          vue.createElementVNode("input", {
+            class: "login-input",
+            placeholder: "请输入密码"
+          })
+        ]),
+        vue.createElementVNode("view", { class: "input-group" }, [
+          vue.createVNode(_component_uni_icons, {
+            type: "locked-filled",
+            size: "60rpx",
+            color: "#6966AD"
+          }),
+          vue.createElementVNode("input", {
+            class: "login-input",
+            placeholder: "再次输入以确认密码"
+          })
+        ]),
+        vue.createElementVNode("view", { class: "to-login" }, [
+          vue.createElementVNode("text", { class: "rn-text" }, "已有账号？"),
+          vue.createElementVNode("text", { class: "r-text" }, " 点此登录")
+        ]),
+        vue.createElementVNode("button", { class: "login-button" }, "注册")
+      ])
+    ]);
+  }
+  const PagesRegisterRegister = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/pages/Register/Register.vue"]]);
+  const _sfc_main$1 = {
+    data() {
+      return {
+        remeberOrNot: false,
+        account: "",
+        password: ""
+      };
+    },
+    methods: {
+      goApLogin() {
+        uni.navigateTo({
+          url: "/pages/Login/apLogin"
+        });
+      },
+      goRegister() {
+        uni.navigateTo({
+          url: "/pages/Register/Register"
+        });
+      },
+      // 获取验证码
+      async getVerification() {
+        const account = this.account.trim();
+        if (!account) {
+          uni.showToast({
+            title: "请输入邮箱",
+            icon: "none"
+          });
+          return;
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(account)) {
+          uni.showToast({
+            title: "请输入有效的邮箱地址",
+            icon: "none"
+          });
+          return;
+        }
+        try {
+          const res = await uni.request({
+            url: "https://274c7adb.r21.cpolar.top/verification/send",
+            method: "POST",
+            data: {
+              email: account
+            },
+            // 传递邮箱
+            header: {
+              "Content-Type": "application/x-www-form-urlencoded"
+              // 表单格式
+            }
+          });
+          if (res.data === "验证码发送成功。") {
+            uni.showToast({
+              title: "验证码已发送",
+              icon: "success"
+            });
+          } else {
+            uni.showToast({
+              title: res.data,
+              icon: "none"
+            });
+          }
+        } catch (error) {
+          uni.showToast({
+            title: "发送失败，请重试",
+            icon: "none"
+          });
+          formatAppLog("error", "at pages/Login/vcLogin.vue:103", "发送验证码错误:", error);
+        }
+      },
+      // 验证验证码并登录
+      async checkVerification() {
+        const account = this.account.trim();
+        const code = this.password.trim();
+        if (!account || !code) {
+          uni.showToast({
+            title: "请输入邮箱和验证码",
+            icon: "none"
+          });
+          return;
+        }
+        try {
+          const res = await uni.request({
+            url: "https://274c7adb.r21.cpolar.top/verification/verify",
+            method: "POST",
+            data: {
+              email: account,
+              code
+            },
+            // 传递邮箱和验证码
+            header: {
+              "Content-Type": "application/x-www-form-urlencoded"
+            }
+          });
+          if (res.data === "验证码验证成功。") {
+            uni.showToast({
+              title: "登录成功",
+              icon: "success"
+            });
+            uni.setStorageSync("isLoggedIn", true);
+            uni.reLaunch({
+              url: "/pages/index/index"
+            });
+          } else {
+            uni.showToast({
+              title: res.data,
+              icon: "none"
+            });
+          }
+        } catch (error) {
+          uni.showToast({
+            title: "验证失败，请重试",
+            icon: "none"
+          });
+          formatAppLog("error", "at pages/Login/vcLogin.vue:154", "验证码验证错误:", error);
+        }
+      }
+    }
+  };
+  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$1);
+    return vue.openBlock(), vue.createElementBlock("view", { class: "login-container" }, [
+      vue.createElementVNode("image", {
+        class: "background-image",
+        src: _imports_0$1,
+        mode: "heightFix"
+      }),
+      vue.createElementVNode("view", { class: "login-box" }, [
+        vue.createElementVNode("view", { class: "login-textbox" }, [
+          vue.createElementVNode("text", { class: "login-title" }, "登录"),
+          vue.createElementVNode("text", {
+            class: "y-text",
+            onClick: _cache[0] || (_cache[0] = ($event) => $options.goApLogin())
+          }, "账号密码登录")
+        ]),
+        vue.createElementVNode("view", { class: "input-groups" }, [
+          vue.createElementVNode("view", { class: "input-group" }, [
+            vue.createVNode(_component_uni_icons, {
+              type: "person",
+              size: "60rpx",
+              color: "#6966AD"
+            }),
+            vue.withDirectives(vue.createElementVNode(
+              "input",
+              {
+                class: "login-input",
+                "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => $data.account = $event),
+                placeholder: "手机号/邮箱"
+              },
+              null,
+              512
+              /* NEED_PATCH */
+            ), [
+              [vue.vModelText, $data.account]
+            ])
+          ]),
+          vue.createElementVNode("view", { class: "input-group" }, [
+            vue.createVNode(_component_uni_icons, {
+              type: "locked",
+              size: "60rpx",
+              color: "#6966AD"
+            }),
+            vue.withDirectives(vue.createElementVNode(
+              "input",
+              {
+                class: "login-input",
+                "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => $data.password = $event),
+                placeholder: "验证码"
+              },
+              null,
+              512
+              /* NEED_PATCH */
+            ), [
+              [vue.vModelText, $data.password]
+            ]),
+            vue.createElementVNode("button", {
+              class: "Verification-button",
+              onClick: _cache[3] || (_cache[3] = ($event) => $options.getVerification())
+            }, "获取")
+          ]),
+          vue.createElementVNode("button", {
+            class: "login-button",
+            onClick: _cache[4] || (_cache[4] = ($event) => $options.checkVerification())
+          }, "登录"),
+          vue.createElementVNode("view", { class: "to-register" }, [
+            vue.createElementVNode("text", { class: "rn-text" }, "没有账号？"),
+            vue.createElementVNode("text", {
+              class: "r-text",
+              onClick: _cache[5] || (_cache[5] = ($event) => $options.goRegister())
+            }, " 点此注册")
+          ])
+        ])
+      ])
+    ]);
+  }
+  const PagesLoginVcLogin = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "F:/大三下学期/移动应用开发/test2/muwu/pages/Login/vcLogin.vue"]]);
   __definePage("pages/index/index", PagesIndexIndex);
+  __definePage("pages/local/local", PagesLocalLocal);
+  __definePage("pages/Login/apLogin", PagesLoginApLogin);
+  __definePage("pages/Register/Register", PagesRegisterRegister);
+  __definePage("pages/Login/vcLogin", PagesLoginVcLogin);
   const _sfc_main = {
     onLaunch: function() {
       formatAppLog("log", "at App.vue:4", "App Launch");
