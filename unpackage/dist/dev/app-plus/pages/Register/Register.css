@@ -557,31 +557,13 @@
 /* 文章场景相关 */
 .content {
   position: relative;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  /* 添加 flex 布局 */
-  flex-direction: column;
-  /* 垂直排列子元素 */
-  align-items: center;
-  /* 水平居中 */
-}
-.login-container {
-  margin-top: 25%;
-  width: 85%;
-  height: auto;
-  /* 改为自动高度以适应内容 */
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 2px solid #7e7bb9;
-  border-radius: 10px;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* 容器内内容水平居中 */
-  position: relative;
-  padding: 0.625rem;
-  /* 添加内边距以改善布局 */
-  /* 移除 margin: 15% auto 0;，因为居中由 .content 的 flex 控制 */
+  justify-content: center;
+  /* 确保内容垂直居中 */
 }
 .background-image {
   position: absolute;
@@ -591,6 +573,18 @@
   height: 100%;
   z-index: -1;
 }
+.login-container {
+  margin-top: 0%;
+  width: 85%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid #7e7bb9;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.625rem;
+}
 .login-title {
   color: #6966AD;
   margin-bottom: 10%;
@@ -598,37 +592,15 @@
   font-weight: bold;
   width: 100%;
   text-align: center;
-  /* 标题文字居中 */
-  /* 移除 align-self: flex-start; 和 margin-left: 10%; 以居中 */
-  /* 可保留 margin-top: 10%; 或根据需要调整 */
 }
 .input-group {
   width: 100%;
-  /* 调整为 100% 以充分利用容器宽度 */
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 0.625rem;
   padding-bottom: 0.09375rem;
   border-bottom: 0.03125rem solid #ccc;
-}
-.remeberme {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  margin-top: 7%;
-}
-.text-center {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-.to-login {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin-top: 6%;
 }
 .login-button {
   margin-top: 10%;
@@ -643,10 +615,7 @@
   text-align: center;
   transition: all 0.3s ease;
   align-self: center;
-  /* 按钮居中，替换 align-self: flex-end; */
 }
-
-/* 其他样式保持不变 */
 .Verification-button {
   font-size: 1rem;
   width: auto;
@@ -658,12 +627,7 @@
   text-align: center;
   transition: all 0.3s ease;
 }
-.login-input {
-  flex: 1;
-  font-size: 1rem;
-  padding: 0 0.3125rem;
-  text-align: left;
-}
+.login-input,
 .Verification-input {
   flex: 1;
   font-size: 1rem;
@@ -677,19 +641,11 @@
 .Verification-input::placeholder {
   color: #c8c8c8;
 }
-.y-text {
-  margin-top: 5%;
-  font-size: 0.875rem;
-  color: #6966AD;
-}
-.z-text {
-  font-size: 0.875rem;
-  color: #343434;
-}
-.w-text {
-  margin-left: auto;
-  font-size: 0.875rem;
-  color: #343434;
+.to-login {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 6%;
 }
 .rn-text {
   font-size: 0.875rem;

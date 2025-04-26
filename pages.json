@@ -35,6 +35,13 @@
 			{
 				"navigationBarTitleText" : "验证码登录"
 			}
+		},
+		{
+			"path" : "pages/My/My",
+			"style" : 
+			{
+				"navigationBarTitleText" : "验证码登录"
+			}
 		}
 	],
 	"globalStyle": {
@@ -58,7 +65,7 @@
 					"text": "云盘"
 				},
 				{
-					"pagePath": "pages/Login/apLogin",
+					"pagePath": "pages/My/My",
 					"text": "我的"
 				}
 			]
