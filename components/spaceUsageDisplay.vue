@@ -60,6 +60,8 @@
 		/* 为固定的导航栏腾出空间 */
 		width: 100%;
 		padding: 20rpx;
+		display: flex;
+		flex-direction: row;
 		box-sizing: border-box;
 	}
 

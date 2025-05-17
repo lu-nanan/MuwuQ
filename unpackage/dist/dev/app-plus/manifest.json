@@ -60,7 +60,10 @@
           "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
           "<uses-permission android:name=\"android.permission.INTERNET\"/>",
           "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
-          "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>"
+          "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+          "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+          "<uses-permission android:name=\"android.permission.MANAGE_EXTERNAL_STORAGE\"/>"
         ]
       },
       "apple": {
@@ -129,11 +132,7 @@
       ],
       "backgroundColor": "#ffffff",
       "selectedIndex": 0,
-      "shown": true,
-      "child": [
-        "lauchwebview"
-      ],
-      "selected": 1
+      "shown": true
     }
   },
   "app-harmony": {

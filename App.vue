@@ -1,5 +1,8 @@
 <script>
 	export default {
+		globalData: {
+		    userInfo: null
+		  },
 		onLaunch: function() {
 			console.log('App Launch')
 		},
@@ -14,4 +17,6 @@
 
 <style>
 	/*每个页面公共css */
+	page{
+	}
 </style>

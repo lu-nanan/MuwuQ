@@ -1,12 +1,13 @@
 <template>
-	<view class="file-item">
+	<view class="file-item" >
+		<checkbox v-if="checked"></checkbox>
 		<view class="file-icon">
 			<text>haha</text>
 		</view>
-
-		<!-- 文件信息 -->
+		
+		<!-- 锟侥硷拷锟斤拷息 -->
 		<view class="file-info">
-			<text class="file-name">{{ file.name }}</text>
+			<text class="file-name">{{ file.name }} {{file.selected}} {{checked}}</text>
 			<view class="file-datesize">
 				<text class="file-date">{{ file.date }}</text>
 				<text class="file-size">{{ file.size }}</text>
@@ -17,7 +18,17 @@
 
 <script>
 	export default {
-		props:["file"]
+		props:{
+			file:{
+            type: Object,
+            default: () => []
+        },
+			checked:{
+				type:Boolean,
+				default:false
+			}
+			}
+		
 	}
 </script>
 

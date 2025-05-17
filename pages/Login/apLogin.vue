@@ -60,10 +60,19 @@
 			},
 			handleChange() {
 				this.remeberOrNot = !this.remeberOrNot
+				uni.setStorageSync('rememberme',this.remeberOrNot);
 				console.log(this.remeberOrNot)
 			},
 			show() {
 				console.log(this.account, this.password)
+			},
+			onload(){
+				
+				this.rememberOrNot=uni.getStorageSync('rememberme');
+				if(rememberOrNot){
+				this.account = uni.getStorageSync('account');
+				this.password = uni.getStorageSync('password');
+				}
 			},
 			async checkPassword() {
 				if (!this.account.trim()) {
@@ -81,7 +90,7 @@
 					return;
 				}
 
-				const url = 'https://274c7adb.r21.cpolar.top/auth/login';
+				const url = 'https://1e2c207f.r21.cpolar.top/auth/login';
 				const data = {
 					account: this.account,
 					password: this.password,
@@ -97,12 +106,21 @@
 						},
 					});
 
-					if (res.data === '登录成功') {
+					if (res.data.message === '登录成功') {
 						uni.showToast({
 							title: '登录成功',
 							icon: 'success'
 						});
-						uni.setStorageSync('isLoggedIn', true);
+						if(this.rememberOrNot){
+						uni.setStorageSync('account',account);
+						uni.setStorageSync('password',password);
+						}
+						else{
+							uni.removeStorageSync('account');
+							uni.removeStorageSync('password');
+						}
+						const app=getApp();
+						app.globalData.userInfo={id: res.data.userId}
 						uni.reLaunch({
 							url: '/pages/index/index'
 						});

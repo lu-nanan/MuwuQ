@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view>
 		<view class="custom-navbar">
 			<!-- 排序方式 -->
 			<picker mode="selector" :range="sortOptions" @change="handleSortChange" class="nav-item">
@@ -25,16 +25,17 @@
 export default {
 	data() {
 		return {
-			sortOptions: ['最近使用', '最久未用', '从大到小', '从小到大'],
-			currentSort: '最近使用',
+			sortOptions: ['默认排序','最近使用', '最久未用', '从大到小', '从小到大'],
+			currentSort: '默认排序',
 			fileOptions: ['所有文件', '图片', '文件', '文件夹', '视频', '音频'],
-			currentFile: '图片',
+			currentFile: '所有文件',
 			isBatchMode: false,
 		}
 	},
 	methods: {
 		handleSortChange(e) {
 			this.currentSort = this.sortOptions[e.detail.value]
+			uni.$emit('sortedEvent',e)
 		},
 
 		handleFileChange(e) {
@@ -52,16 +53,11 @@ export default {
 <style>
 /* 导航栏样式 */
 .custom-navbar {
-	position: fixed;
-	top: var(--status-bar-height); /* 自适应状态栏高度 */
-	left: 0;
-	right: 0;
-	height: 8%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	height: 120rpx;
 	background-color: #fff;
-	z-index: 999;
 	border-bottom: 1px solid #f0f0f0;
 }
 
@@ -82,23 +78,4 @@ export default {
 	color: #007AFF;
 }
 
-/* 内容容器 */
-.content-wrapper {
-	margin-top: 120rpx; /* 为固定的导航栏腾出空间 */
-	width: 100%;
-	padding: 20rpx;
-	box-sizing: border-box;
-}
-
-.content {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	padding: 40rpx 20rpx;
-	background: #fff;
-	border-radius: 10rpx;
-	box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05);
-}
 </style>

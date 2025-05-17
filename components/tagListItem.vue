@@ -9,7 +9,8 @@
     <view class="file-info">
       <view class="file-nametag">
         <text class="file-name">{{ file.name }}</text>
-        <view class="file-tag">{{ file.tag }}</view>
+        
+        <view class="file-tag" :style="{ backgroundColor: flagTagColor }">{{ file.tag }}</view>
       </view>
       <view class="file-datesize">
         <text class="file-date">{{ file.date }}</text>
@@ -21,13 +22,23 @@
 
 <script>
   export default {
-    props: ['file'],
+    props:{
+		 file: {
+		      type: Object,
+		    },
+		    // 新增 prop：标签颜色
+		    flagTagColor: {
+		      type: String,   // 类型为字符串
+		      default: '#333' // 默认值
+		    },
+		},
+		
     data() {
       return {
-		  // name: "�ļ���1",
+		  // name: "文件夹1",
 		  // date: "2024-12-1",
 		  // size: "123G",
-		  // tag: "����"
+		  // tag: "工作"
 	  };
     }
   }
@@ -72,14 +83,10 @@
   margin-bottom: 5px;
 }
 
-.file-name { 
-	font-size: 16px;
+.file-name {
+  font-size: 16px;
   font-weight: bold;
   color: #333;
-  white-space: nowrap;      /* 禁止换行 */
-  overflow: hidden;         /* 超出部分隐藏 */
-  text-overflow: ellipsis;  /* 显示省略号 */
-  max-width: 150px;         /* 设置最大宽度，根据需要调整 */
 }
 
 .file-tag {
