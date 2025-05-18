@@ -3,7 +3,7 @@
 		<view class="file-list-container">
 			<scroll-view scroll-y="true" class="file-scroll-view">
 				<view v-for="(file, index) in files" :key="index">
-					<view :class="{'file-item-container' : file.selected && isBatchModes}" @click="selected(file.name)">
+					<view :class="{'file-item-container' : file.selected && isBatchModes}" @click="selected(file)" @longpress="">
 						<cloudFileListItem class="file-item" :file="file" />
 					</view>
 				</view>
@@ -19,7 +19,7 @@
 		props: {
 		    files: {
 		      type: Array,
-		      default: () => [] // 默认空数组
+		      default: () => [], // 默认空数组
 		    }
 		  },
 		data() {
@@ -56,8 +56,8 @@
 		},
 		methods: {
 			
-			selected(name) {
-				uni.$emit('jump',name);
+			selected(file) {
+				uni.$emit('jump',file);
 				if (this.isBatchModes === true) {
 					for (let i = 0; i < this.files.length; i++) {
 						if (this.files[i].name === name) {
@@ -99,5 +99,23 @@
 
 	.file-scroll-view {
 		height: 100%;
+	}
+	.dropdown {
+	  position: absolute;
+	  top: 100%;
+	  left: 0;
+	  background-color: #fff;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+	
+	.dropdown-item {
+	  padding: 10px 20px;
+	  cursor: pointer;
+	}
+	
+	.dropdown-item:hover {
+	  background-color: #f0f0f0;
 	}
 </style>

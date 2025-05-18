@@ -3,7 +3,7 @@
 		<ss-upload ref="ssUpload" width="260rpx" height="100rpx" @getFile="getFile" @uploadSuccess="uploadSuccess"
 			:uploadOptions="uploadOptions" :isUploadServer="isUploadServer" :webviewStyle="webviewStyle"
 			:fileInput="fileInput">
-			<image class="background-image" src="/static/7_E}6DMMKB]MN90($703355_tmb.png" mode="heightFix" @click="uploadFile()"></image>
+			<image class="background-image" src="/static/7_E}6DMMKB]MN90($703355_tmb.png" mode="heightFix" @click="uploadFile"></image>
 		</ss-upload>
 	</view>
 
@@ -20,14 +20,14 @@
 					isUploadServer: true,
 					uploadOptions: {
 						// 上传服务器地址，此地址需要替换为你的接口地址
-						url: 'https://7427bc69.r21.cpolar.top/file/upload', //仅为示例，非真实的接口地址,
+						url: 'https://45a0c5de.r21.cpolar.top/file/upload', //仅为示例，非真实的接口地址,
 						//请求方式，get,post
 						type: 'post',
 						// 上传附件的key
 						name: 'file',
 						// 根据你接口需求自定义请求头
 						header: {
-							'token': '123456',
+							'Accept': 'application/json'
 						},
 						// 根据你接口需求自定义body参数
 						formData: {
@@ -55,45 +55,6 @@
 				};
 			},
 			methods: {
-				goHistory() {
-					uni.navigateTo({
-						url: '/pages/ShareHistory/ShareHistory'
-					})
-				},
-				goChangePass() {
-					uni.navigateTo({
-						url: '/pages/ChangePass/ChangePass'
-					})
-				},
-				goTagLibarily() {
-					uni.navigateTo({
-						url: '/pages/taglibarily/taglibarily'
-					})
-				},
-				testConnection() {
-					const app = getApp()
-					console.log(app.globalData.userInfo.id);
-	
-	
-					uni.request({
-						url: 'https://121.41.70.8:8082/getAllUserInfo/getAllUserInfo',
-						method: 'GET',
-						header: {
-							'Accept': 'application/json',
-							'Content-Type': 'application/json'
-						},
-						success: (res) => {
-							this.message = `连接成功，后端返回状态码：${res.statusCode}`;
-						},
-						fail: (err) => {
-							if (err.errMsg.includes('request:fail')) {
-								this.message = err.errMsg + ' ' + err.statusCode;
-							} else {
-								this.message = `连接失败，错误信息：${err.errMsg}`;
-							}
-						}
-					});
-				},
 				scrolltolower() {
 					console.log(145623)
 					this.$refs.ssUpload.hide();
@@ -102,11 +63,19 @@
 					})
 				},
 				uploadFile() {
+					console.log(getApp().globalData.userInfo.id)
 					//#ifdef H5 || MP-WEIXIN
 					setTimeout(() => {
 						this.$refs.ssUpload.uploadFile()
 					})
 					// #endif
+					
+						uni.showToast({
+						  title: '加载中...',
+						  icon: 'loading',
+						  duration: 30000, // 防止长时间请求导致提示自动消失
+						  mask: true // 显示遮罩层，防止用户操作
+						});
 				},
 				//获取文件
 				getFile(result) {
@@ -119,6 +88,7 @@
 					// #endif
 				},
 				uploadSuccess(result) {
+					uni.hideToast();
 					console.log('上传服务器后端返回结果', result) //后期取值可以在这里做操作
 					this.result = JSON.stringify(result)
 					const fileInfo = result[0]; // 获取数组中的对象
@@ -148,8 +118,15 @@
 								
 								console.log(currentInput);
 								this.targetString = newString;
+								
+									uni.showToast({
+									  title: '加载中...',
+									  icon: 'loading',
+									  duration: 30000, // 防止长时间请求导致提示自动消失
+									  mask: true // 显示遮罩层，防止用户操作
+									});
 								uni.request({
-									url: 'https://7427bc69.r21.cpolar.top/file/check',
+									url: 'https://45a0c5de.r21.cpolar.top/file/check',
 									method: 'POST', // 修改请求方法为POST
 										header: {
 											'Accept': 'application/json',
@@ -161,6 +138,7 @@
 											path: currentInput // 示例路径，需替换为实际值
 										},
 									success: (res) => {
+										uni.hideToast();
 										console.log('1',res)
 										console.log('2',res.data)
 										console.log('3',res.data.suggest)
@@ -180,9 +158,16 @@
 													if(res.confirm){
 														sure=true;
 													}
-													console.log(sure)
+													console.log(sure);
+													
+														uni.showToast({
+														  title: '加载中...',
+														  icon: 'loading',
+														  duration: 30000, // 防止长时间请求导致提示自动消失
+														  mask: true // 显示遮罩层，防止用户操作
+														});
 													uni.request({
-														url: 'https://7427bc69.r21.cpolar.top/file/suggest',
+														url: 'https://45a0c5de.r21.cpolar.top/file/suggest',
 														method: 'GET', // 修改请求方法为POST
 															header: {
 																'Accept': 'application/json',
@@ -194,6 +179,7 @@
 																filePath: currentInput // 示例路径，需替换为实际值
 															},
 															success: (res) => {
+																uni.hideToast();
 																uni.showToast({
 																	icon:'success'
 																});

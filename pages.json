@@ -20,9 +20,7 @@
 			"path" : "pages/local/local",
 			"style" : 
 			{
-				"navigationBarTitleText" : "本地页面",
-				
-				"navigationStyle": "custom"
+				"navigationBarTitleText" : "本地上传"
 			}
 		},
 		
