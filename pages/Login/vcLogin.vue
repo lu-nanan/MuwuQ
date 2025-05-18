@@ -74,7 +74,7 @@
 
 				try {
 					const res = await uni.request({
-						url: 'https://274c7adb.r21.cpolar.top/verification/send',
+						url: 'https://1e2c207f.r21.cpolar.top/verification/send',
 						method: 'POST',
 						data: {
 							email: account
@@ -118,7 +118,7 @@
 
 				try {
 					const res = await uni.request({
-						url: 'https://274c7adb.r21.cpolar.top/verification/verify',
+						url: 'https://1e2c207f.r21.cpolar.top/verification/verify',
 						method: 'POST',
 						data: {
 							email: account,
