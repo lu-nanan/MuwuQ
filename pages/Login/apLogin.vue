@@ -90,13 +90,19 @@
 					return;
 				}
 
-				const url = 'https://1e2c207f.r21.cpolar.top/auth/login';
+				const url = 'https://45a0c5de.r21.cpolar.top/auth/login';
 				const data = {
 					account: this.account,
 					password: this.password,
 				};
 
 				try {
+					uni.showToast({
+					  title: '加载中...',
+					  icon: 'loading',
+					  duration: 30000, // 防止长时间请求导致提示自动消失
+					  mask: true // 显示遮罩层，防止用户操作
+					});
 					const res = await uni.request({
 						url,
 						method: 'POST',
@@ -107,6 +113,7 @@
 					});
 
 					if (res.data.message === '登录成功') {
+						uni.hideToast();
 						uni.showToast({
 							title: '登录成功',
 							icon: 'success'

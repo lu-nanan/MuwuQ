@@ -9,7 +9,7 @@
     <view class="file-info">
       <view class="file-nametag">
         <text class="file-name">{{ file.name }}</text>
-        <view class="file-tag">{{ file.tag }}</view>
+        <view class="file-tag">{{  file.tag? file.tag : '文件夹'}}</view>
       </view>
       <view class="file-datesize">
         <text class="file-date">{{ file.date }}</text>
